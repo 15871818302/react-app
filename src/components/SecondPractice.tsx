@@ -5,6 +5,7 @@ class SecondPractice extends React.Component<any, any> {
   state: any = {
     commandList: [],
     commandContent: "",
+    testData: "",
   };
 
   changeHandle = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -12,6 +13,15 @@ class SecondPractice extends React.Component<any, any> {
       commandContent: e.target.value,
     });
   };
+
+  // 用于子传父的回调函数
+  changeTestData = (value: String) => {
+    this.setState({
+      testData: value,
+    });
+  };
+
+  // 关于兄弟组件传值，实际上就是把两个组件都导入父组件中，通过父组件中的state和相应的回调函数进行数据处理
 
   testList: any = [];
 
@@ -37,7 +47,10 @@ class SecondPractice extends React.Component<any, any> {
         {this.state.commandList.map((item: any) => (
           <div key={item.id}>{item.content}</div>
         ))}
-        <SonComponent content={this.state.commandContent}></SonComponent>
+        <SonComponent
+          content={this.state.commandContent}
+          // changeTest={this.changeTestData}
+        ></SonComponent>
         <ClassSon content={this.state.commandContent}></ClassSon>
       </div>
     );

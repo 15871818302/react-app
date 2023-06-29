@@ -4,7 +4,8 @@ import React from "react";
 
 // 函数式子组件
 export function SonComponent(props: any) {
-  console.log(props);
+  // 调用父组件传递过来的函数，进行调用
+  // props.changeTest("111");
   return <div>{props.content}</div>;
 }
 
