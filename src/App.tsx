@@ -9,6 +9,7 @@ import TextComponent from "./components/TextComponent";
 import Practice from "./components/Practice";
 import SecondPractice from "./components/SecondPractice";
 import FatherComponent from "./components/PracticeTwo";
+import UnionComponent from "./components/Children";
 
 const list = [
   {
@@ -62,6 +63,7 @@ function App() {
         <Practice></Practice>
         <SecondPractice></SecondPractice>
         <FatherComponent></FatherComponent>
+        <UnionComponent></UnionComponent>
       </header>
     </div>
   );
