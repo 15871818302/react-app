@@ -8,7 +8,6 @@ import InputComponent from "./components/InputComponent";
 import TextComponent from "./components/TextComponent";
 import Practice from "./components/Practice";
 import SecondPractice from "./components/SecondPractice";
-import Context from "./components/Context";
 import FatherComponent from "./components/PracticeTwo";
 
 const list = [
@@ -62,7 +61,6 @@ function App() {
         <TextComponent></TextComponent>
         <Practice></Practice>
         <SecondPractice></SecondPractice>
-        <Context></Context>
         <FatherComponent></FatherComponent>
       </header>
     </div>
