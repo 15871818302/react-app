@@ -10,6 +10,7 @@ import Practice from "./components/Practice";
 import SecondPractice from "./components/SecondPractice";
 import FatherComponent from "./components/PracticeTwo";
 import UnionComponent from "./components/Children";
+import LifeDuration from "./components/LifeDuration";
 
 const list = [
   {
@@ -64,6 +65,7 @@ function App() {
         <SecondPractice></SecondPractice>
         <FatherComponent></FatherComponent>
         <UnionComponent></UnionComponent>
+        <LifeDuration></LifeDuration>
       </header>
     </div>
   );
