@@ -11,6 +11,8 @@ import SecondPractice from "./components/SecondPractice";
 import FatherComponent from "./components/PracticeTwo";
 import UnionComponent from "./components/Children";
 import LifeDuration from "./components/LifeDuration";
+import HookComponent from "./components/UseHook";
+import Main from "./components/StateHook";
 
 const list = [
   {
@@ -65,6 +67,8 @@ function App() {
         <SecondPractice></SecondPractice>
         <FatherComponent></FatherComponent>
         <UnionComponent></UnionComponent>
+        <HookComponent></HookComponent>
+        <Main></Main>
         <LifeDuration></LifeDuration>
       </header>
     </div>
