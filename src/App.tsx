@@ -13,6 +13,7 @@ import UnionComponent from "./components/Children";
 import LifeDuration from "./components/LifeDuration";
 import HookComponent from "./components/UseHook";
 import Main from "./components/StateHook";
+import UseRefHook from "./components/RefHook";
 
 const list = [
   {
@@ -69,6 +70,7 @@ function App() {
         <UnionComponent></UnionComponent>
         <HookComponent></HookComponent>
         <Main></Main>
+        <UseRefHook></UseRefHook>
         <LifeDuration></LifeDuration>
       </header>
     </div>
