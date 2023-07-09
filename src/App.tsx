@@ -14,6 +14,7 @@ import LifeDuration from "./components/LifeDuration";
 import HookComponent from "./components/UseHook";
 import Main from "./components/StateHook";
 import UseRefHook from "./components/RefHook";
+import StoreButton from "./components/UseStore";
 
 const list = [
   {
@@ -71,6 +72,7 @@ function App() {
         <HookComponent></HookComponent>
         <Main></Main>
         <UseRefHook></UseRefHook>
+        <StoreButton></StoreButton>
         <LifeDuration></LifeDuration>
       </header>
     </div>
