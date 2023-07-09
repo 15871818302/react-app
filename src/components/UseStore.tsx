@@ -1,12 +1,11 @@
-import React from "react";
 // redux中的hook
-import {useSelector, useDispatch} from "react-redux";
-import {addCount} from "../store/StoreComponent";
+import { useSelector, useDispatch } from "react-redux";
+import { addCount } from "../store/StoreComponent";
 
 const StoreButton = () => {
     // 使用数据
     const { count } = useSelector(
-        (state:any) => {
+        (state: any) => {
             return state.counter
         }
     )
@@ -22,8 +21,8 @@ const StoreButton = () => {
 
     return (
         <>
-            { count }
-            <button onClick={() => {clickHandle()}}>+++</button>
+            {count}
+            <button onClick={() => { clickHandle() }}>+++</button>
         </>
     )
 }

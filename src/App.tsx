@@ -15,6 +15,7 @@ import HookComponent from "./components/UseHook";
 import Main from "./components/StateHook";
 import UseRefHook from "./components/RefHook";
 import StoreButton from "./components/UseStore";
+import PushList from "./components/SecondStore";
 
 const list = [
   {
@@ -74,6 +75,7 @@ function App() {
         <UseRefHook></UseRefHook>
         <StoreButton></StoreButton>
         <LifeDuration></LifeDuration>
+        <PushList></PushList>
       </header>
     </div>
   );
