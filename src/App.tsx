@@ -73,9 +73,9 @@ function App() {
         <HookComponent></HookComponent>
         <Main></Main>
         <UseRefHook></UseRefHook>
+        <PushList></PushList>
         <StoreButton></StoreButton>
         <LifeDuration></LifeDuration>
-        <PushList></PushList>
       </header>
     </div>
   );
