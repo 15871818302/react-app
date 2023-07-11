@@ -1,4 +1,12 @@
 import React, { createRef } from "react";
+// 引入router
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useSearchParams,
+} from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
 import FirstComponent from "./components/FirstComponent";
@@ -16,6 +24,7 @@ import Main from "./components/StateHook";
 import UseRefHook from "./components/RefHook";
 import StoreButton from "./components/UseStore";
 import PushList from "./components/SecondStore";
+import Test from "./components/RouterComponent";
 
 const list = [
   {
@@ -35,6 +44,21 @@ const list = [
 //   fontWeight: 700,
 // };
 
+const Home = () => <div>this is home</div>;
+const About = () => <div>this is about</div>;
+
+const TestPage = () => {
+  // params传参用useParams()
+  let [params] = useSearchParams();
+  // query传参就用get函数，如果是params传参就直接取值
+  let id = params.get("id");
+  return (
+    <div>
+      <div>{id}</div>
+    </div>
+  );
+};
+
 function App() {
   const state = {
     msg: "333",
@@ -42,6 +66,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/*用于包裹所有路由*/}
+        <BrowserRouter>
+          {/*声明路由跳转*/}
+          <Link to={"/"}></Link>
+          <Link to={"/about"}></Link>
+          <Test></Test>
+          {/*声明对应路由加载的对象*/}
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/test" element={<TestPage />}></Route>
+          </Routes>
+        </BrowserRouter>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
